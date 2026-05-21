@@ -1,4 +1,4 @@
-# Software Engineering Project – ITSE305  
+# Software Testing and Quality Assurance – ITSE403  
 University of Bahrain – College of IT  
 
 ## Project Title  
@@ -10,7 +10,7 @@ University of Bahrain – College of IT
 - Reem Saleh Qasem – [202200281]  
 
 ## GitHub Repository  
-[(https://github.com/SE305/SE305-Project/settings/access)]
+[(https://github.com/M-Alradhi/SE403/tree/main)]
 
 ## Tasks Distribution  
 | Team Member        | Use Case Assigned | 

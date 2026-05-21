@@ -1,22 +1,38 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
         Library library = new Library();
+        Scanner scanner = new Scanner(System.in);
 
-        // Add books
         library.addBook(new Book("Java"));
         library.addBook(new Book("Python"));
+        library.addBook(new Book("Data Structures"));
 
-        User user = new User("Mariam");
+        System.out.println("=========================================");
+        System.out.println("   Online Library Management System");
+        System.out.println("=========================================");
+        System.out.println("Available books: Java, Python, Data Structures");
+        System.out.println();
 
-        // Test cases
-        System.out.println(library.borrowBook("Java", user));       // Success
-        System.out.println(library.borrowBook("Java", user));       // Not available
-        System.out.println(library.borrowBook("C++", user));        // Not found
-        System.out.println(library.borrowBook("", user));           // Invalid title
-        System.out.println(library.borrowBook("Python", null));     // Invalid user
+        System.out.print("Enter your name: ");
+        String userName = scanner.nextLine();
+        User user = new User(userName);
 
-        // Return book
-        System.out.println(library.returnBook("Java"));
+        System.out.print("Enter book title to borrow: ");
+        String bookTitle = scanner.nextLine();
+
+        String borrowResult = library.borrowBook(bookTitle, user);
+        System.out.println("Result: " + borrowResult);
+
+        System.out.println();
+        System.out.print("Enter book title to return: ");
+        String returnTitle = scanner.nextLine();
+
+        String returnResult = library.returnBook(returnTitle);
+        System.out.println("Result: " + returnResult);
+
+        scanner.close();
     }
 }
